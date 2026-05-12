@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width:100%;
+    height:auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(to top, rgba(22, 106, 112, 0.596), transparent);
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    height: 100px;
+    
+}
+
+/* Logo */
+.foldal-img {
+    width: 100px;
+}
+
+/* ================= MENU ================= */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    margin: auto;
+    
+    
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 20px;
+    
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ================= HAMBURGER ================= */
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+.header {
+    height: 100vh;
+    background: url("pics/waff.webp") center/cover no-repeat fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+.header2 {
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+.fo-szoveg {
+    margin-left: 10%;
+}
+.fo-szoveg h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.fo-szoveg p {
+    margin-top: 10px;
+    font-weight: 300;
+    animation: fadeIn 3s ease forwards;
+    
+}
+
+.fedezd-fel {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #00eef7, #0112ff);
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+.fedezd-fel:hover {
+    box-shadow: 0 0 25px #4b4946;
+    transform: scale(1.05);
+}
+
+/* ================= Kiemelt kínált ================= */
+.fo-leiras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+}
+.fo-card{
+    position: relative;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+    transition: 0.5s;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    
+}
+.fo-card-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#kep {
+    background: url("pics/fooldallenti.jpg") center/cover no-repeat;
+}
+.osszes_termek {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+.termek-card{
+    position: relative;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: 0.5s;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    
+}
+.termek-card-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+#elso {
+    background: url("pics/waff.webp") center/cover no-repeat;
+}
